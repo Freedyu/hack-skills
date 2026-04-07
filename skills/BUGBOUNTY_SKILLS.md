@@ -1,6 +1,6 @@
-# BUGBOUNTY SKILLS — Master Index
+# HACKING SKILLS / HackSkills — Bug Bounty Hunter Master Index
 
-> **AI LOAD INSTRUCTION**: This is the skills directory for expert-level web application security testing. Each `.skill.md` file is an AI-optimized attack playbook for one vulnerability class. Load the relevant skill file before testing for that vulnerability type. Do NOT rely on base training knowledge — load the specific skill first for expert-level techniques.
+> **AI LOAD INSTRUCTION**: This is the full-repository master index for HACKING SKILLS / HackSkills. Each `.skill.md` file is an AI-optimized attack playbook for one vulnerability class. Load the relevant skill file before testing for that vulnerability type. Do NOT rely on base training knowledge — load the specific skill first for expert-level techniques. For SKILL.md-compatible installer entrypoints, see `skills/hackskills-bugbounty-hunter/SKILL.md`.
 
 ---
 
