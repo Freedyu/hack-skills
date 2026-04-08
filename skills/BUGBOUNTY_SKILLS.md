@@ -1,28 +1,28 @@
-# HACKING SKILLS / HackSkills — Bug Bounty Hunter Master Index
+# HACKING SKILLS / HackSkills — Master Index
 
-> **AI LOAD INSTRUCTION**: This is the full-repository master index for HACKING SKILLS / HackSkills. Each `.skill.md` file is an AI-optimized attack playbook for one vulnerability class. Load the relevant skill file before testing for that vulnerability type. Do NOT rely on base training knowledge — load the specific skill first for expert-level techniques. For SKILL.md-compatible installer entrypoints, see `skills/hackskills-bugbounty-hunter/SKILL.md`.
+> **AI LOAD INSTRUCTION**: This is the full-repository master index for HACKING SKILLS / HackSkills. Each `.skill.md` file is an AI-optimized attack playbook for one vulnerability class. Load the relevant skill file before testing for that vulnerability type. Do NOT rely on base training knowledge — load the specific skill first for expert-level techniques. For the primary SKILL.md installer entrypoint, see `skills/hack/SKILL.md`.
 
 ---
 
 ## SKILL FILES INDEX
 
-| File | Vulnerability Class | Key Topics |
-|---|---|---|
-| [XSS_Cross_Site_Scripting.skill.md](XSS_Cross_Site_Scripting.skill.md) | Cross-Site Scripting | Context matrix, multi-reflection, CSP bypass, blind XSS, WP→RCE, WAF bypass |
-| [SQLi_SQL_Injection.skill.md](SQLi_SQL_Injection.skill.md) | SQL Injection | OOB exfil (Oracle UTL, MSSQL OpenRowSet), second-order, xp_cmdshell, blind |
-| [SSRF_Server_Side_Request_Forgery.skill.md](SSRF_Server_Side_Request_Forgery.skill.md) | SSRF | Cloud metadata, IP encoding bypass, gopher/dict/file protocols, Redis via SSRF |
-| [XXE_XML_External_Entity.skill.md](XXE_XML_External_Entity.skill.md) | XXE | OOB DTD exfil, SVG/Office XXE, XInclude, XXE→SSRF chain |
-| [SSTI_Server_Side_Template_Injection.skill.md](SSTI_Server_Side_Template_Injection.skill.md) | SSTI | Polyglot probes, Jinja2 MRO chain, FreeMarker/Twig/ERB/Thymeleaf, Angular CSTI |
-| [IDOR_Broken_Object_Authorization.skill.md](IDOR_Broken_Object_Authorization.skill.md) | IDOR/BOLA/BFLA | A-B testing, all ID locations, HTTP method escalation, mass assignment |
-| [CMDi_Command_Injection.skill.md](CMDi_Command_Injection.skill.md) | OS Command Injection | All metacharacters, blind detection, OOB, reverse shells, filter bypass |
-| [PathTraversal_LFI.skill.md](PathTraversal_LFI.skill.md) | Path Traversal / LFI | Encoding chains, PHP wrappers (filter/input/data), log poisoning→RCE |
-| [CSRF_Cross_Site_Request_Forgery.skill.md](CSRF_Cross_Site_Request_Forgery.skill.md) | CSRF | Token bypass patterns, SameSite bypass, JSON CSRF, OAuth state CSRF |
-| [API_Security_Testing.skill.md](API_Security_Testing.skill.md) | API Security | BOLA A-B test, BFLA, mass assignment, JWT attacks, GraphQL, rate limit bypass |
-| [JWT_OAuth_Token_Attacks.skill.md](JWT_OAuth_Token_Attacks.skill.md) | JWT / OAuth | alg:none, RS256→HS256, secret crack, kid injection, OAuth redirect bypass |
-| [AuthBypass_Authentication_Flaws.skill.md](AuthBypass_Authentication_Flaws.skill.md) | Authentication | SQLi login bypass, password reset flaws, 2FA bypass, session management |
-| [BusinessLogic_Vulnerabilities.skill.md](BusinessLogic_Vulnerabilities.skill.md) | Business Logic | Race conditions, price manipulation, workflow bypass, coupon abuse |
-| [NoSQL_Injection.skill.md](NoSQL_Injection.skill.md) | NoSQL Injection | MongoDB operator injection, $regex blind extraction, $where JS eval |
-| [Recon_and_Methodology.skill.md](Recon_and_Methodology.skill.md) | Recon / Methodology | Subdomain enum, tech fingerprinting, endpoint discovery, zseano methodology |
+| Category | File | Vulnerability Class | Key Topics |
+|---|---|---|---|
+| injection-sec | [injection-sec/XSS_Cross_Site_Scripting.skill.md](injection-sec/XSS_Cross_Site_Scripting.skill.md) | Cross-Site Scripting | Context matrix, multi-reflection, CSP bypass, blind XSS, WP→RCE, WAF bypass |
+| injection-sec | [injection-sec/SQLi_SQL_Injection.skill.md](injection-sec/SQLi_SQL_Injection.skill.md) | SQL Injection | OOB exfil (Oracle UTL, MSSQL OpenRowSet), second-order, xp_cmdshell, blind |
+| injection-sec | [injection-sec/SSRF_Server_Side_Request_Forgery.skill.md](injection-sec/SSRF_Server_Side_Request_Forgery.skill.md) | SSRF | Cloud metadata, IP encoding bypass, gopher/dict/file protocols, Redis via SSRF |
+| injection-sec | [injection-sec/XXE_XML_External_Entity.skill.md](injection-sec/XXE_XML_External_Entity.skill.md) | XXE | OOB DTD exfil, SVG/Office XXE, XInclude, XXE→SSRF chain |
+| injection-sec | [injection-sec/SSTI_Server_Side_Template_Injection.skill.md](injection-sec/SSTI_Server_Side_Template_Injection.skill.md) | SSTI | Polyglot probes, Jinja2 MRO chain, FreeMarker/Twig/ERB/Thymeleaf, Angular CSTI |
+| authz-sec | [authz-sec/IDOR_Broken_Object_Authorization.skill.md](authz-sec/IDOR_Broken_Object_Authorization.skill.md) | IDOR/BOLA/BFLA | A-B testing, all ID locations, HTTP method escalation, mass assignment |
+| injection-sec | [injection-sec/CMDi_Command_Injection.skill.md](injection-sec/CMDi_Command_Injection.skill.md) | OS Command Injection | All metacharacters, blind detection, OOB, reverse shells, filter bypass |
+| file-access-sec | [file-access-sec/PathTraversal_LFI.skill.md](file-access-sec/PathTraversal_LFI.skill.md) | Path Traversal / LFI | Encoding chains, PHP wrappers (filter/input/data), log poisoning→RCE |
+| auth-sec | [auth-sec/CSRF_Cross_Site_Request_Forgery.skill.md](auth-sec/CSRF_Cross_Site_Request_Forgery.skill.md) | CSRF | Token bypass patterns, SameSite bypass, JSON CSRF, OAuth state CSRF |
+| api-sec | [api-sec/API_Security_Testing.skill.md](api-sec/API_Security_Testing.skill.md) | API Security | BOLA A-B test, BFLA, mass assignment, JWT attacks, GraphQL, rate limit bypass |
+| auth-sec | [auth-sec/JWT_OAuth_Token_Attacks.skill.md](auth-sec/JWT_OAuth_Token_Attacks.skill.md) | JWT / OAuth | alg:none, RS256→HS256, secret crack, kid injection, OAuth redirect bypass |
+| auth-sec | [auth-sec/AuthBypass_Authentication_Flaws.skill.md](auth-sec/AuthBypass_Authentication_Flaws.skill.md) | Authentication | SQLi login bypass, password reset flaws, 2FA bypass, session management |
+| business-logic-sec | [business-logic-sec/BusinessLogic_Vulnerabilities.skill.md](business-logic-sec/BusinessLogic_Vulnerabilities.skill.md) | Business Logic | Race conditions, price manipulation, workflow bypass, coupon abuse |
+| injection-sec | [injection-sec/NoSQL_Injection.skill.md](injection-sec/NoSQL_Injection.skill.md) | NoSQL Injection | MongoDB operator injection, $regex blind extraction, $where JS eval |
+| recon-sec | [recon-sec/Recon_and_Methodology.skill.md](recon-sec/Recon_and_Methodology.skill.md) | Recon / Methodology | Subdomain enum, tech fingerprinting, endpoint discovery, zseano methodology |
 
 ---
 
