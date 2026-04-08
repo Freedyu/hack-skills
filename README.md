@@ -1,4 +1,4 @@
-# HACKING SKILLS / HackSkills
+# HACK.SKILLS - Agent 的黑客武装
 
 <p align="center">
     <img src="./assets/readme-hero-banner.jpg" alt="HackSkills Hero Banner" width="100%" />
