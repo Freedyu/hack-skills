@@ -1,5 +1,5 @@
 ---
-name: entry-30-auth-sec
+name: auth-sec
 description: >-
   Entry P1 category router for authentication and authorization. Use when
   testing login flows, sessions, object authorization, JWT, OAuth, CORS, CSRF,

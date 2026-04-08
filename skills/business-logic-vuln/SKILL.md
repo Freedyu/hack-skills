@@ -1,5 +1,5 @@
 ---
-name: entry-60-business-logic-vuln
+name: business-logic-vuln
 description: >-
   Entry P1 category router for business logic testing. Use when workflow abuse,
   race conditions, pricing flaws, or multi-step state attacks matter more than

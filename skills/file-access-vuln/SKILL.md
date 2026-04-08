@@ -1,5 +1,5 @@
 ---
-name: entry-50-file-access-vuln
+name: file-access-vuln
 description: >-
   Entry P1 category router for file access and upload workflows. Use when
   testing download endpoints, file paths, local file inclusion, upload flows,

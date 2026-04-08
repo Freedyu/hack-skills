@@ -1,5 +1,5 @@
 ---
-name: entry-10-recon-for-sec
+name: recon-for-sec
 description: >-
   Entry P1 category router for reconnaissance and methodology. Use when mapping
   scope, discovering assets, fingerprinting technology, building endpoint

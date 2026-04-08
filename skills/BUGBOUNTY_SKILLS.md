@@ -2,7 +2,7 @@
 
 > **AI LOAD INSTRUCTION**: This file is the loader-oriented master index for HACKING SKILLS / HackSkills. Prefer the primary entry skill [hack/SKILL.md](./hack/SKILL.md), then a category router, and only then a deep topic skill. Do NOT start from the longest flat list of micro-skills unless the current evidence is already specific.
 
-> Loader note: entry-layer frontmatter names now use stable prefixes: `entry-00-*` for the primary router and `entry-10-*` to `entry-60-*` for category routers. Paths stay unchanged; the prefix only helps grouping and display order.
+> Loader note: entry-layer skills now keep directory-consistent frontmatter names such as `hack`, `recon-for-sec`, `api-sec`, and `auth-sec`. Loader stability is handled by a reduced entry set plus converged `Entry P0 / Entry P1` descriptions, not by renaming skills away from their directory names.
 
 ---
 

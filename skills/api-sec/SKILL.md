@@ -1,5 +1,5 @@
 ---
-name: entry-20-api-sec
+name: api-sec
 description: >-
   Entry P1 category router for API security. Use when choosing between API
   recon, authorization, token abuse, and hidden-parameter workflows before any

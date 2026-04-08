@@ -1,8 +1,17 @@
 # HACKING SKILLS / HackSkills
 
+<p align="center">
+    <img src="./assets/readme-hero-banner.jpg" alt="HackSkills Hero Banner" width="100%" />
+</p>
+
+<p align="center">
+    <strong>总入口 -> 分类入口 -> 深度专题技能</strong><br/>
+    一个总入口，六个稳定分类入口，以及一组按需下钻的扁平化安全专题技能。
+</p>
+
 这是一个面向漏洞赏金、Web 安全、API 安全和授权测试的 Agent Skills 知识库。
 
-仓库现在采用标准的目录式 skill 结构：每一个可复用 skill 都是一个独立文件夹，文件夹内包含一个标准入口 [SKILL.md](./skills/hack/SKILL.md)。设计目标不是把所有零碎技巧都暴露成入口，而是让 loader 优先发现高价值入口，再按分类和现象逐层进入更深的专题技能。
+当前分支已经收敛到标准的目录式结构：每一个 skill 都位于单独目录下，统一采用 `skills/{semantic-identifier}/SKILL.md`。设计目标不是把所有零碎技巧都暴露成入口，而是把 loader 真正需要优先看到的入口压缩为一层总入口、六个分类入口，以及按需下钻的深度专题 skill。
 
 目标很直接：把真正能在实战里派上用场、又方便审查和持续维护的安全知识，整理成一套可安装、可检索、可组合的 HackSkills。
 
@@ -32,24 +41,27 @@ npx skills add yaklang/hack-skills
 
 如果你的工具支持直接拉单个 SKILL.md，也可以使用：
 
-- frontmatter name: `entry-00-hack`
+- frontmatter name: `hack`
 - raw URL: `https://raw.githubusercontent.com/yaklang/hack-skills/main/skills/hack/SKILL.md`
 
-装完以后，建议先从总入口开始，再按现象进入分类入口和深度专题 skill。
+装完以后，推荐顺序很简单：先从总入口开始，再进入分类入口，最后才进入深度专题 skill。
 
 ## Loader 优先级
 
 为了更符合实际 loader 的使用方式，这个仓库把 skill 分成三层：
 
-另外，入口层 frontmatter name 现在使用稳定前缀：`entry-00-*` 表示总入口，`entry-10-*` 到 `entry-60-*` 表示分类入口。这样做不改变文件路径，只是让 loader 在按名称展示时更稳定地把入口层排在一起。
+最近这一轮调整后，入口层统一遵循两个约束：
+
+- `目录名 = frontmatter name`，避免触发 skill 校验器的目录一致性错误。
+- description 使用更收敛的 `Entry P0 / Entry P1` 模板，让 loader 和人类读者都更容易理解入口层级。
 
 | 层级 | 作用 | 推荐暴露方式 | 代表 skill |
 |---|---|---|---|
 | 总入口 | 负责全局路由、测试顺序和跨类别切换 | 优先暴露 | [hack](./skills/hack/SKILL.md) |
-| 分类入口 | 负责按攻击面分流到稳定的专题族 | 优先暴露 | [api-sec](./skills/api-sec/SKILL.md), [auth-sec](./skills/auth-sec/SKILL.md), [injection-checking](./skills/injection-checking/SKILL.md) |
+| 分类入口 | 负责按攻击面分流到稳定的专题族 | 优先暴露 | [recon-for-sec](./skills/recon-for-sec/SKILL.md), [api-sec](./skills/api-sec/SKILL.md), [auth-sec](./skills/auth-sec/SKILL.md) |
 | 深度专题 | 提供完整攻击手册和执行细节 | 按需加载 | [xss-cross-site-scripting](./skills/xss-cross-site-scripting/SKILL.md), [jwt-oauth-token-attacks](./skills/jwt-oauth-token-attacks/SKILL.md) |
 
-像 payload-selection、默认凭证、用户名生成、端口聚焦这类短 skill 现在进一步并回了主专题 skill，不再保留为独立入口。loader 优先面对总入口、分类入口和深度专题，不再需要处理中间层碎片 skill。
+像 payload-selection、默认凭证、用户名生成、端口聚焦这类短 skill 现在已经并回主专题或分类入口。loader 只需要优先面对这三层，不再需要处理中间层碎片 skill。
 
 ## 怎么使用
 
@@ -79,6 +91,8 @@ npx skills add yaklang/hack-skills
 | 分类入口 | [file-access-vuln](./skills/file-access-vuln/SKILL.md) | 上传、下载、LFI、路径控制、处理链 | 文件名、路径、下载、预览、上传 |
 | 分类入口 | [business-logic-vuln](./skills/business-logic-vuln/SKILL.md) | 竞态、价格、流程、状态机问题 | 优惠券、库存、支付、审批、配额 |
 
+入口层的当前 frontmatter name 与目录名一一对应：`hack`、`recon-for-sec`、`api-sec`、`auth-sec`、`injection-checking`、`file-access-vuln`、`business-logic-vuln`。
+
 ## 分类到专题映射
 
 | 分类 | 推荐先读 | 常见下钻专题 |
@@ -99,6 +113,8 @@ hack-skills/
     ├── BUGBOUNTY_SKILLS.md
     ├── hack/
     │   └── SKILL.md
+    ├── recon-for-sec/
+    │   └── SKILL.md
     ├── api-sec/
     │   └── SKILL.md
     ├── auth-sec/
@@ -109,7 +125,9 @@ hack-skills/
     │   └── SKILL.md
     ├── business-logic-vuln/
     │   └── SKILL.md
-    ├── recon-for-sec/
+    ├── api-recon-and-docs/
+    │   └── SKILL.md
+    ├── authbypass-authentication-flaws/
     │   └── SKILL.md
     ├── jwt-oauth-token-attacks/
     │   └── SKILL.md
@@ -122,14 +140,11 @@ hack-skills/
 目录说明：
 
 - `hack/`: 总入口，适合先装先用。
-- `recon-for-sec/`: 分类入口 skill，负责信息收集和方法论路由。
-- `injection-checking/`: 分类入口 skill，负责 XSS、SQLi、SSRF、XXE、SSTI、CMDi、NoSQL 的路由。
-- `auth-sec/`: 分类入口 skill，负责登录、会话、JWT、OAuth、CSRF、IDOR、BOLA、BFLA 的路由。
-- `api-sec/`: 分类入口 skill，负责 API recon、授权、认证和 GraphQL 的路由。
-- `file-access-vuln/`: 分类入口 skill，负责路径穿越、LFI、上传与文件处理链路由。
-- `business-logic-vuln/`: 分类入口 skill，负责竞态、价格篡改和流程绕过路由。
-- 其他语义化目录例如 `xss-cross-site-scripting/`、`api-auth-and-jwt-abuse/`、`recon-and-methodology/` 都是可直接被加载的深度专题 skill。
-- 原先的 payload-selection / brute-selection / API 中间路由型小 skill 已并入主专题或分类入口，用来减少入口噪音。
+- `recon-for-sec/`、`api-sec/`、`auth-sec/`、`injection-checking/`、`file-access-vuln/`、`business-logic-vuln/`: 六个稳定的分类入口。
+- 其他语义化目录例如 `xss-cross-site-scripting/`、`api-auth-and-jwt-abuse/`、`recon-and-methodology/`、`upload-insecure-files/` 都是可直接加载的深度专题 skill。
+- 原先的 payload-selection / brute-selection / API 中间路由型小 skill 已并入主专题或分类入口，以减少入口噪音和 loader 选择负担。
+
+换句话说，这个仓库现在不是“按类别套子目录，再塞一堆零散文件”，而是统一的扁平 skill 池，只是其中有一小层被刻意保留为入口层。
 
 完整索引见 `skills/BUGBOUNTY_SKILLS.md`。
 
@@ -156,7 +171,7 @@ npx skills add yaklang/hack-skills
 
 ### Raw URL 安装
 
-适用于支持拉取单文件技能的工具：
+适用于支持拉取单文件技能的工具。默认先拉总入口，不建议先从深度专题单独开始：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yaklang/hack-skills/main/skills/hack/SKILL.md
@@ -176,7 +191,7 @@ cd hack-skills
 - [./skills/recon-for-sec/SKILL.md](./skills/recon-for-sec/SKILL.md)
 - [./skills/recon-and-methodology/SKILL.md](./skills/recon-and-methodology/SKILL.md)
 
-如果你只是想让 loader 更稳定，优先让 loader 命中 `entry-00-hack` 和 `entry-10-*` 到 `entry-60-*` 这一组入口。现在中间层 helper skill 已大幅收缩，默认不再需要暴露一串小 skill 给 loader 选。
+如果你只是想让 loader 更稳定，优先让 loader 命中 `hack` 加六个分类入口；只有在已经明确漏洞现象时，再直接命中深度专题 skill。现在中间层 helper skill 已大幅收缩，默认不再需要暴露一串小 skill 给 loader 选。
 
 ## 设计原则
 

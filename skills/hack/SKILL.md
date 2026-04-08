@@ -1,5 +1,5 @@
 ---
-name: entry-00-hack
+name: hack
 description: >-
   Entry P0 primary router for HackSkills. Use when the task involves web
   application testing, API security assessment, recon, vulnerability triage,
