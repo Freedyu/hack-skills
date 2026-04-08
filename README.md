@@ -1,38 +1,38 @@
 # HACKING SKILLS / HackSkills
 
-面向漏洞赏金、Web 安全、API 安全与授权测试场景的 Agent Skills 知识库。
+这是一个面向漏洞赏金、Web 安全、API 安全和授权测试的 Agent Skills 知识库。
 
-这个仓库的目标很明确：把高质量、可审查、适合被 Agent 加载的安全知识整理成一套可安装、可检索、可组合使用的 HackSkills。
+目标很直接：把真正能在实战里派上用场、又方便审查和持续维护的安全知识，整理成一套可安装、可检索、可组合的 HackSkills。
 
 ## 快速开始
 
-首选安装入口是 `hack`：
+首选入口是 `hack`：
 
 ```bash
 npx skills add yaklang/hack-skills
 ```
 
-如果你的工具支持直接安装单个 SKILL.md，也可以使用：
+如果你的工具支持直接拉单个 SKILL.md，也可以使用：
 
 - skill id: `hack`
 - raw URL: `https://raw.githubusercontent.com/yaklang/hack-skills/main/skills/hack/SKILL.md`
 
-安装后，优先从总入口开始，再按漏洞类型加载专题技能。
+装完以后，建议先从总入口开始，再按现象进入具体专题。
 
 ## 怎么使用
 
 推荐顺序：
 
-1. 先加载 `hack`，让 Agent 判断当前目标属于 Recon、API、授权、认证、注入还是业务逻辑问题。
-2. 再根据目标现象进入对应专题目录。
-3. 最后回到总索引补足遗漏的链路与组合打法。
+1. 先加载 `hack`，让 Agent 判断当前更像是 recon、API、认证授权、注入检查、文件访问还是业务逻辑问题。
+2. 再进入对应目录，加载更细的专题技能。
+3. 最后回到总索引补链路，避免只盯住单点。
 
-适合的使用场景：
+比较适合这些场景：
 
-- 新漏洞赏金目标的初始测试路线规划
-- Web/API 安全测试中的专题技能补全
-- 授权边界、认证边界、输入边界的系统化审视
-- 把零散现象快速路由到正确漏洞类别
+- 刚接一个新目标，需要先定测试路线。
+- Web/API 安全测试里，想把专题方法补全。
+- 需要系统化过一遍认证、授权、输入边界和业务边界。
+- 手上只有零散现象，想快速路由到正确漏洞类别。
 
 ## 仓库结构
 
@@ -43,39 +43,36 @@ hack-skills/
     ├── BUGBOUNTY_SKILLS.md
     ├── hack/
     │   └── SKILL.md
-    ├── recon-sec/
-    ├── injection-sec/
+    ├── recon-for-sec/
+    ├── injection-checking/
     ├── auth-sec/
-    ├── authz-sec/
     ├── api-sec/
-    ├── file-access-sec/
-    └── business-logic-sec/
+    ├── file-access-vuln/
+    └── business-logic-vuln/
 ```
 
 目录说明：
 
-- `hack/`: 总入口技能，适合先装先用。
-- `recon-sec/`: 信息收集、方法论、目标理解。
-- `injection-sec/`: XSS、SQLi、SSRF、XXE、SSTI、CMDi、NoSQL 注入。
-- `auth-sec/`: 认证、会话、JWT、OAuth、CSRF。
-- `authz-sec/`: IDOR、BOLA、BFLA 等授权问题。
+- `hack/`: 总入口，适合先装先用。
+- `recon-for-sec/`: 信息收集、方法论、目标理解。
+- `injection-checking/`: XSS、SQLi、SSRF、XXE、SSTI、CMDi、NoSQL 这一类输入到危险解释器的问题。
+- `auth-sec/`: 登录、会话、JWT、OAuth、CSRF，也包括 IDOR、BOLA、BFLA 这类权限边界问题。
 - `api-sec/`: API 安全专项。
-- `file-access-sec/`: 路径穿越、LFI、文件访问控制问题。
-- `business-logic-sec/`: 竞态、价格篡改、流程绕过等业务逻辑问题。
+- `file-access-vuln/`: 路径穿越、LFI、下载接口、文件访问控制。
+- `business-logic-vuln/`: 竞态、价格篡改、流程绕过、优惠券和库存类问题。
 
 完整索引见 `skills/BUGBOUNTY_SKILLS.md`。
 
 ## 技能选择建议
 
-如果你看到这些现象，优先加载这些目录中的技能：
+如果你看到这些现象，优先从这些目录入手：
 
-- HTML/JS 反射与模板表达式：`injection-sec`
-- 登录、重置密码、2FA、JWT、OAuth、CSRF：`auth-sec`
-- 对象 ID、租户隔离、权限边界：`authz-sec`
+- HTML/JS 反射、模板表达式、危险解析链路：`injection-checking`
+- 登录、重置密码、2FA、JWT、OAuth、CSRF、对象权限边界：`auth-sec`
 - REST API、GraphQL、移动端后端：`api-sec`
-- 文件路径、下载接口、上传链路：`file-access-sec`
-- 优惠券、库存、支付、流程状态机：`business-logic-sec`
-- 新目标、未知攻击面：先从 `recon-sec` 开始
+- 文件路径、下载接口、上传链路：`file-access-vuln`
+- 优惠券、库存、支付、状态机与多步骤流程：`business-logic-vuln`
+- 新目标、未知攻击面：先从 `recon-for-sec` 开始
 
 ## 安装方式
 
@@ -104,14 +101,14 @@ cd hack-skills
 
 - `skills/hack/SKILL.md`
 - `skills/BUGBOUNTY_SKILLS.md`
-- `skills/recon-sec/Recon_and_Methodology.skill.md`
+- `skills/recon-for-sec/Recon_and_Methodology.skill.md`
 
 ## 设计原则
 
 - 安全知识优先于花哨包装。
 - 内容可审查性优先于数量扩张。
 - 优先服务授权测试、合法研究与防御验证场景。
-- 目录名带 `-sec`，用于明确这是安全知识分类，不是通用工程目录。
+- 目录名尽量让人一眼看出安全语义，而不是做机械后缀堆叠。
 
 ## 贡献方式
 

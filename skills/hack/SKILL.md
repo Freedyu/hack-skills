@@ -92,21 +92,21 @@ metadata:
 
 如果你拥有完整仓库，优先结合这些专题文档一起使用：
 
-- `skills/recon-sec/Recon_and_Methodology.skill.md`
-- `skills/injection-sec/XSS_Cross_Site_Scripting.skill.md`
-- `skills/injection-sec/SQLi_SQL_Injection.skill.md`
-- `skills/injection-sec/SSRF_Server_Side_Request_Forgery.skill.md`
-- `skills/injection-sec/XXE_XML_External_Entity.skill.md`
-- `skills/injection-sec/SSTI_Server_Side_Template_Injection.skill.md`
-- `skills/authz-sec/IDOR_Broken_Object_Authorization.skill.md`
-- `skills/injection-sec/CMDi_Command_Injection.skill.md`
-- `skills/file-access-sec/PathTraversal_LFI.skill.md`
+- `skills/recon-for-sec/Recon_and_Methodology.skill.md`
+- `skills/injection-checking/XSS_Cross_Site_Scripting.skill.md`
+- `skills/injection-checking/SQLi_SQL_Injection.skill.md`
+- `skills/injection-checking/SSRF_Server_Side_Request_Forgery.skill.md`
+- `skills/injection-checking/XXE_XML_External_Entity.skill.md`
+- `skills/injection-checking/SSTI_Server_Side_Template_Injection.skill.md`
+- `skills/auth-sec/IDOR_Broken_Object_Authorization.skill.md`
+- `skills/injection-checking/CMDi_Command_Injection.skill.md`
+- `skills/file-access-vuln/PathTraversal_LFI.skill.md`
 - `skills/auth-sec/CSRF_Cross_Site_Request_Forgery.skill.md`
 - `skills/api-sec/API_Security_Testing.skill.md`
 - `skills/auth-sec/JWT_OAuth_Token_Attacks.skill.md`
 - `skills/auth-sec/AuthBypass_Authentication_Flaws.skill.md`
-- `skills/business-logic-sec/BusinessLogic_Vulnerabilities.skill.md`
-- `skills/injection-sec/NoSQL_Injection.skill.md`
+- `skills/business-logic-vuln/BusinessLogic_Vulnerabilities.skill.md`
+- `skills/injection-checking/NoSQL_Injection.skill.md`
 
 ## High-Value Expert Intuitions
 
