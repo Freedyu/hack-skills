@@ -289,6 +289,18 @@ fetch("https://target.example/vulnerable", {
 
 ---
 
+### Advanced Reference
+
+Also load [H2_SMUGGLING_VARIANTS.md](./H2_SMUGGLING_VARIANTS.md) when you need:
+- H2.CL and H2.TE variants with byte-level payload examples
+- CL.0 (connection close desync) — technique and detection
+- Fat GET request smuggling (body in GET request)
+- Request smuggling → cache poisoning chain (response queue misalignment)
+- Client-side desync (CSD) via browser Fetch API with JavaScript PoC templates
+- CDN/reverse proxy product behavior matrix (HAProxy, Nginx, Apache, Cloudflare, AWS ALB, Envoy, Varnish, etc.)
+
+---
+
 ## 12. RELATED ROUTING
 
 - **输入进入解释器/查询语言/模板**（与 HTTP 分帧无关）→ [Injection Testing Router](../injection-checking/SKILL.md)（再下钻 XSS、SQLi、SSTI 等）。

@@ -21,6 +21,15 @@ Also load [SCENARIOS.md](./SCENARIOS.md) when you need:
 - Gopher protocol full TCP injection — Redis, MySQL, FastCGI payloads via Gopherus
 - URL parser confusion for filter bypass — `#@`, `\@`, `%00@`, IPv6-mapped IPv4
 
+### Advanced Reference
+
+Also load [URL_PARSER_TRICKS.md](./URL_PARSER_TRICKS.md) when you need:
+- URL parser differential table: Python urllib vs requests vs Java URL vs PHP parse_url vs Node url.parse vs Go net/url
+- Full cloud metadata endpoint catalog (AWS IMDSv1/v2, GCP, Azure, DigitalOcean, Alibaba Cloud, Oracle Cloud, Kubernetes, Hetzner, OpenStack)
+- gopher:// payload recipes for Redis, MySQL, SMTP, FastCGI, Memcached (with encoding rules)
+- DNS Rebinding detailed attack flow with TTL manipulation and TOCTOU analysis
+- PDF/wkhtmltopdf/WeasyPrint/Chrome headless/PhantomJS SSRF patterns and exfiltration techniques
+
 如果只是刚发现一个会取 URL 的参数，直接在这里做第一轮确认即可。
 
 ### First-pass payloads
