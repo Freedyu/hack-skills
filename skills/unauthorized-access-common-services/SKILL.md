@@ -13,6 +13,15 @@ description: >-
 - [ssrf-server-side-request-forgery](../ssrf-server-side-request-forgery/SKILL.md) when these services are reachable via SSRF (e.g., SSRF → Redis)
 - [jndi-injection](../jndi-injection/SKILL.md) when H2 Console or similar accepts JNDI connection strings
 - [deserialization-insecure](../deserialization-insecure/SKILL.md) when RMI Registry or T3 protocol is exposed
+- [network-protocol-attacks](../network-protocol-attacks/SKILL.md) for layer 2/3 attacks during service enumeration
+- [reverse-shell-techniques](../reverse-shell-techniques/SKILL.md) for shell payloads after gaining command execution
+
+### Comprehensive Port Reference
+
+Also load [PORT_SERVICE_MATRIX.md](./PORT_SERVICE_MATRIX.md) when you need:
+- Full exploitation matrix organized by port number (20+ services)
+- Enumeration, brute force, and post-exploitation per service
+- Quick triage during nmap/masscan output analysis
 
 ---
 

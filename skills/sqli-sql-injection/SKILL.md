@@ -20,6 +20,16 @@ Also load [SCENARIOS.md](./SCENARIOS.md) when you need:
 - Django GIS Oracle `utl_inaddr.get_host_name` CVE
 - ORDER BY / LIMIT injection techniques
 
+### Advanced Reference
+
+Also load [SQLMAP_ADVANCED.md](./SQLMAP_ADVANCED.md) when you need:
+- SQLMap tamper scripts matrix and WAF bypass tamper chain recipes (space2comment, between, charencode, etc.)
+- `--technique`, `--risk`/`--level` combinations and `--second-url` for second-order injection
+- `--os-shell` / `--os-pwn` OS-level exploitation via SQLMap
+- INSERT/UPDATE/DELETE injection patterns with data exfiltration examples
+- GraphQL + SQL injection (batched queries, nested field injection, mutation injection)
+- DB-specific advanced functions: PostgreSQL dollar-sign quoting, MSSQL linked servers, Oracle DBMS_PIPE/DBMS_SCHEDULER
+
 如果只是刚确认可疑 SQL sink，不要先加载额外的 payload skill，直接在这里完成第一轮验证。
 
 ### First-pass payload families
