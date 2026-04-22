@@ -12,7 +12,7 @@ description: >-
 
 Before using full engine-specific exploitation, you can first load:
 
-- 先直接使用本文件开头的 polyglot probe sequence 做低噪声指纹判断
+- First use the polyglot probe sequence at the top of this file for low-noise fingerprinting
 - [expression-language-injection](../expression-language-injection/SKILL.md) when `${7*7}` or `%{7*7}` resolves in Java (SpEL/OGNL) — different attack surface from template engines
 
 ### Extended Scenarios

@@ -80,7 +80,7 @@ file.svg
 archive.zip
 ```
 
-这组小样本已经覆盖了原本单独 upload payload helper 的主要用途，不再需要额外入口来做第一轮选型。
+This small sample set already covers the main use cases of the former standalone upload payload helper, so no extra entry is needed for first-pass selection.
 
 Do not stop at upload success. Successful upload without dangerous retrieval or processing is not enough.
 

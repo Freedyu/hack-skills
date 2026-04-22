@@ -30,7 +30,7 @@ Also load [SQLMAP_ADVANCED.md](./SQLMAP_ADVANCED.md) when you need:
 - GraphQL + SQL injection (batched queries, nested field injection, mutation injection)
 - DB-specific advanced functions: PostgreSQL dollar-sign quoting, MSSQL linked servers, Oracle DBMS_PIPE/DBMS_SCHEDULER
 
-如果只是刚确认可疑 SQL sink，不要先加载额外的 payload skill，直接在这里完成第一轮验证。
+If you have only confirmed a suspicious SQL sink, do not load extra payload skills first; complete first-pass validation here.
 
 ### First-pass payload families
 

@@ -202,7 +202,7 @@ http://169.254.169.254/metadata/v1/vendor-data
 http://169.254.169.254/metadata/v1/floating_ip/ipv4/active
 ```
 
-### 2.5 Alibaba Cloud (阿里云)
+### 2.5 Alibaba Cloud (Aliyun)
 
 ```
 # No auth header required

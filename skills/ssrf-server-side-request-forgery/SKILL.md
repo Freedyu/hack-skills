@@ -30,7 +30,7 @@ Also load [URL_PARSER_TRICKS.md](./URL_PARSER_TRICKS.md) when you need:
 - DNS Rebinding detailed attack flow with TTL manipulation and TOCTOU analysis
 - PDF/wkhtmltopdf/WeasyPrint/Chrome headless/PhantomJS SSRF patterns and exfiltration techniques
 
-如果只是刚发现一个会取 URL 的参数，直接在这里做第一轮确认即可。
+If you just found a parameter that fetches a URL, perform first-pass confirmation here directly.
 
 ### First-pass payloads
 

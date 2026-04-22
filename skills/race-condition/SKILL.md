@@ -6,7 +6,7 @@ description: >-
 
 # SKILL: Race Conditions — Testing & Exploitation Playbook
 
-> **AI LOAD INSTRUCTION**: Treat race conditions as **authorization/state integrity** issues: non-atomic read-then-write lets multiple requests observe stale state. Prioritize **one-time** or **balance-like** operations. Combine **parallel transport** (HTTP/1.1 last-byte sync, HTTP/2 single-packet, Turbo Intruder gates) with **application evidence** (duplicate success responses, inconsistent balances, duplicate ledger rows). **Authorized testing only.** 中文路由：与「业务流程 / 优惠券 / 库存 / 一次性奖励」相关时，先读本 skill，并交叉加载 `business-logic-vulnerabilities`。
+> **AI LOAD INSTRUCTION**: Treat race conditions as **authorization/state integrity** issues: non-atomic read-then-write lets multiple requests observe stale state. Prioritize **one-time** or **balance-like** operations. Combine **parallel transport** (HTTP/1.1 last-byte sync, HTTP/2 single-packet, Turbo Intruder gates) with **application evidence** (duplicate success responses, inconsistent balances, duplicate ledger rows). **Authorized testing only.** Routing note: for business workflows, coupons, inventory, or one-time rewards, start with this skill and cross-load `business-logic-vulnerabilities`.
 
 ---
 
@@ -277,7 +277,7 @@ Adjust hosts/paths by duplicating `RequestEngine` instances if endpoints differ 
 2. **Server-side** artifact: two rows, two emails, two grants, or wrong final balance.
 3. **Correlate** with `x-request` (or similar) markers or unique body fields in logs (authorized environments).
 
-**中文路由小结**：若场景更偏「业务规则 / 定价 / 工作流跳过」，加载 `skills/business-logic-vulnerabilities/SKILL.md`；本文件专注 **并发与传输层同步**。
+**Routing summary**: if the scenario is more about business rules, pricing, or workflow bypass, load `skills/business-logic-vulnerabilities/SKILL.md`; this file focuses on **concurrency and transport-layer synchronization**.
 
 ---
 

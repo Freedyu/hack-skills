@@ -29,7 +29,7 @@ Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ```
 
-**中文路由提示**：在 Burp/浏览器 DevTools 里筛 `101` 与 `Upgrade: websocket`；深度 API 测试从 `api-sec` 技能对齐认证与授权模型。
+**Routing note**: in Burp/browser DevTools, filter for `101` and `Upgrade: websocket`; for deeper API testing, align authn/authz models through `api-sec`.
 
 ---
 
@@ -143,7 +143,7 @@ Prefer **Sec-WebSocket-Protocol**, **first-message auth**, or **cookie + CSRF to
 
 - From **[api-sec](../api-sec/SKILL.md)** — authentication, authorization, IDOR, and rate limiting often **mirror** HTTP APIs behind the same WebSocket routes.
 
-**中文**：WebSocket 常与 REST 共用会话与权限模型；从 `api-sec` 对齐同一后端的认证与资源边界。
+**Note**: WebSocket often shares session and permission models with REST; use `api-sec` to align authentication and resource boundaries on the same backend.
 
 ---
 
