@@ -58,6 +58,7 @@ categories:
       - nosql-injection
       - xxe-xml-external-entity
       - deserialization-insecure
+      - ghost-bits-cast-attack
       - expression-language-injection
       - jndi-injection
       - crlf-injection

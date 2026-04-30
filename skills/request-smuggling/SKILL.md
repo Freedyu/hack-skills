@@ -13,7 +13,11 @@ description: >-
 
 Routing note: load this skill when you suspect CDN/reverse-proxy and origin disagree on request-end boundaries, or when abnormal concatenation appears during H2-to-H1 downgrade.
 
-## 0. QUICK START
+## 0. RELATED ROUTING
+
+- [ghost-bits-cast-attack](../ghost-bits-cast-attack/SKILL.md) when the HTTP client library is **Apache HttpClient <= 4.5.9** (HTTPCLIENT-1974/1978) — injecting `瘍瘊` (U+760D U+760A, low bytes `\r\n`) into a header value causes the underlying char-to-byte writer to emit a literal CRLF, splitting the request at the origin without relying on CL/TE disagreement
+
+## 1. QUICK START
 
 ### CL.TE first probe (front-end trusts CL, back-end trusts chunked)
 

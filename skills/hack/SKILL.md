@@ -112,6 +112,7 @@ If you have the full repository, prioritize using these topic documents together
 - [CSV Formula Injection](../csv-formula-injection/SKILL.md)
 - [WebSocket Security](../websocket-security/SKILL.md)
 - [Dependency Confusion](../dependency-confusion/SKILL.md)
+- [Ghost Bits Cast Attack](../ghost-bits-cast-attack/SKILL.md)
 
 Previously separate mini skills such as payload-selection and brute-selection were merged back into their main skills to avoid router overload and selection noise.
 

@@ -29,6 +29,7 @@ Use this file as the deep upload workflow reference. Also load:
 - [xxe xml external entity](../xxe-xml-external-entity/SKILL.md) when SVG, OOXML, or XML imports are accepted
 - [cmdi command injection](../cmdi-command-injection/SKILL.md) when a processor, converter, or media pipeline executes system tools
 - [business logic vulnerabilities](../business-logic-vulnerabilities/SKILL.md) when quotas, overwrite rules, approvals, or storage paths create logic bugs
+- [ghost-bits-cast-attack](../ghost-bits-cast-attack/SKILL.md) when the server is **Apache Tomcat** and the WAF blocks `.jsp` in `filename*` — Tomcat's `RFC2231Utility` narrows each char to byte, so `1.陪sp` (U+966A low byte = `j`) writes `1.jsp` to disk while the WAF sees no `.jsp` literal
 
 ---
 

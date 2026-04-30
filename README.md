@@ -8,7 +8,7 @@
 
 <p align="center">
     <strong>Master Entry → Category Entries → Deep Topic Skills</strong><br/>
-    One master entry, six category entries, and <strong>100</strong> deep topic skills across <strong>14 security domains</strong>.
+    One master entry, six category entries, and <strong>101</strong> deep topic skills across <strong>14 security domains</strong>.
 </p>
 
 An Agent Skills knowledge base covering web security, API security, authentication & authorization, OS privilege escalation (Linux/Windows/macOS), Active Directory attacks, mobile security, binary exploitation (Pwn), reverse engineering, cryptography attacks, blockchain & smart contract security, AI/ML & LLM security, network protocols & pivoting, and digital forensics — built for bug bounty, penetration testing, CTF competitions, and authorized security research.
@@ -100,7 +100,7 @@ After installing, the recommended order is simple: start from the master entry, 
 | Category Entry | [file-access-vuln](./skills/file-access-vuln/SKILL.md) | Upload, download, LFI, path control | File operations |
 | Category Entry | [business-logic-vuln](./skills/business-logic-vuln/SKILL.md) | Race conditions, pricing, workflow, state machines | Business process testing |
 
-## Complete Skill Index (100 Skills)
+## Complete Skill Index (101 Skills)
 
 ### Reconnaissance & Methodology
 
@@ -144,6 +144,7 @@ After installing, the recommended order is simple: start from the master entry, 
 | [nosql-injection](./skills/nosql-injection/SKILL.md) | 341 lines | - | Blind extraction automation scripts, duplicate key bypass, aggregation pipeline injection, $where JS execution |
 | [xxe-xml-external-entity](./skills/xxe-xml-external-entity/SKILL.md) | 326 lines | 112 lines | Local DTD injection (17+ paths for Windows/Linux/JAR), blind XXE, Gopher/FTP OOB |
 | [deserialization-insecure](./skills/deserialization-insecure/SKILL.md) | 714 lines | - | Java/PHP/Python + Ruby Marshal/YAML chains, .NET BinaryFormatter/ViewState/JSON.NET, Node.js node-serialize/funcster |
+| [ghost-bits-cast-attack](./skills/ghost-bits-cast-attack/SKILL.md) | 400+ lines | PAYLOAD_COOKBOOK.md | Java char-to-byte narrowing WAF bypass (Black Hat Asia 2026): re-enables WAF-blocked SQLi/deser/upload/traversal/CRLF/smuggling across Tomcat/Spring/Jetty/Jackson/Fastjson/BCEL/HttpClient/Angus Mail; 255 Unicode bypass candidates per dangerous byte |
 | [expression-language-injection](./skills/expression-language-injection/SKILL.md) | 243 lines | - | SpEL, OGNL, Java EL injection with RCE chains |
 | [jndi-injection](./skills/jndi-injection/SKILL.md) | 265 lines | - | JNDI/LDAP/RMI exploitation, Log4Shell patterns |
 | [crlf-injection](./skills/crlf-injection/SKILL.md) | 175 lines | - | Header injection, HTTP response splitting |

@@ -8,7 +8,7 @@
 
 <p align="center">
     <strong>总入口 → 分类入口 → 深度专题技能</strong><br/>
-    一个总入口，六个稳定分类入口，以及横跨 <strong>14 个安全领域</strong> 的 <strong>100</strong> 个按需下钻的深度专题技能。
+    一个总入口，六个稳定分类入口，以及横跨 <strong>14 个安全领域</strong> 的 <strong>101</strong> 个按需下钻的深度专题技能。
 </p>
 
 这是一个面向 Agent 的安全技能知识库，覆盖 Web 安全、API 安全、认证与授权、操作系统提权（Linux/Windows/macOS）、Active Directory 攻击、移动安全、二进制漏洞利用（Pwn）、逆向工程、密码学攻击、区块链与智能合约安全、AI/ML 与 LLM 安全、网络协议与横向移动、数字取证——服务于漏洞赏金、渗透测试、CTF 竞赛和授权安全研究。
@@ -100,7 +100,7 @@ npx skills add yaklang/hack-skills
 | 分类入口 | [file-access-vuln](./skills/file-access-vuln/SKILL.md) | 上传、下载、LFI、路径控制 | 文件操作 |
 | 分类入口 | [business-logic-vuln](./skills/business-logic-vuln/SKILL.md) | 竞态、价格、流程、状态机 | 业务流程测试 |
 
-## 完整技能索引（100 个技能）
+## 完整技能索引（101 个技能）
 
 ### 侦察与方法论
 
@@ -144,6 +144,7 @@ npx skills add yaklang/hack-skills
 | [nosql-injection](./skills/nosql-injection/SKILL.md) | 341 行 | - | 盲注自动化提取脚本、重复键绕过、聚合管道注入、$where JS 执行 |
 | [xxe-xml-external-entity](./skills/xxe-xml-external-entity/SKILL.md) | 326 行 | 112 行 | 本地 DTD 注入（Windows/Linux/JAR 17+ 路径）、盲 XXE、Gopher/FTP OOB |
 | [deserialization-insecure](./skills/deserialization-insecure/SKILL.md) | 714 行 | - | Java/PHP/Python + Ruby Marshal/YAML 链、.NET BinaryFormatter/ViewState/JSON.NET、Node.js node-serialize/funcster |
+| [ghost-bits-cast-attack](./skills/ghost-bits-cast-attack/SKILL.md) | 400+ 行 | PAYLOAD_COOKBOOK.md | Java char 转 byte 截断导致的 WAF 绕过（Black Hat Asia 2026）：Ghost Bits 以每个危险 ASCII 字节 255 个 Unicode 候选重新激活被 WAF 拦截的 SQLi/反序列化/文件上传/路径穿越/CRLF/请求走私，覆盖 Tomcat/Spring/Jetty/Jackson/Fastjson/BCEL/HttpClient/Angus Mail |
 | [expression-language-injection](./skills/expression-language-injection/SKILL.md) | 243 行 | - | SpEL、OGNL、Java EL 注入及 RCE 链 |
 | [jndi-injection](./skills/jndi-injection/SKILL.md) | 265 行 | - | JNDI/LDAP/RMI 利用、Log4Shell 模式 |
 | [crlf-injection](./skills/crlf-injection/SKILL.md) | 175 行 | - | 头注入、HTTP 响应拆分 |
